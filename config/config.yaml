@@ -1,0 +1,39 @@
+# Canonical configuration file used by config.py
+# Keep values here so reviewers can find configuration under config/ immediately.
+
+strategy:
+  underliers: [NIFTY, BANKNIFTY]
+  max_position_per_instrument: 1
+  strike_selection: nearest
+  strike_steps:
+    NIFTY: 50
+    BANKNIFTY: 100
+    FINNIFTY: 50
+
+execution:
+  transaction_cost_per_lot: 0
+  slippage_bps: 0
+  lot_sizes:
+    NIFTY: 50
+    BANKNIFTY: 25
+    FINNIFTY: 40
+
+backtest:
+  start_date: 20221101
+  end_date: 20221130
+  tick_log_interval: 10
+
+paths:
+  data_dir: allData/allData
+  results_dir: outputs
+
+market:
+  open_time: "09:15:00"
+  close_time: "15:30:00"
+
+futures:
+  suffix: "-I.csv"
+  folder: "Futures (Continuous)"
+
+options:
+  folder: "Options"

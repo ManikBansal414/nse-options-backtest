@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+results/*
+!results/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
