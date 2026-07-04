@@ -11,7 +11,8 @@ from typing import Dict, List
 
 # Try YAML; fall back to hardcoded defaults
 _cfg: dict = {}
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# BASE_DIR points to project root (one level above src/)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _yaml_path = os.path.join(BASE_DIR, "config.yaml")
 _yaml_path_structured = os.path.join(BASE_DIR, "config", "config.yaml")
 

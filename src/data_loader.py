@@ -19,12 +19,12 @@ from datetime import datetime
 from typing import List, Dict, Tuple, Optional, Set
 from functools import lru_cache
 
-from config import (
+from .config import (
     DATA_DIR, FUTURES_FOLDER, OPTIONS_FOLDER,
     FUTURES_SUFFIX, STRIKE_STEPS, MARKET_OPEN, MARKET_CLOSE,
     START_DATE, END_DATE,
 )
-from logger import get_logger
+from .logger import get_logger
 
 log = get_logger()
 

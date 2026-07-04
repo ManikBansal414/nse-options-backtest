@@ -26,8 +26,8 @@ import matplotlib.ticker as mticker
 from matplotlib.gridspec import GridSpec
 from typing import Dict, Optional
 
-from config import RESULTS_DIR, LOT_SIZES
-from logger import get_logger
+from .config import RESULTS_DIR, LOT_SIZES
+from .logger import get_logger
 
 log = get_logger()
 
@@ -560,7 +560,7 @@ def plot_oi_behavior(trade_log: pd.DataFrame):
     if trade_log.empty:
         return
 
-    from data_loader import load_option, build_second_grid_with_oi
+    from .data_loader import load_option, build_second_grid_with_oi
 
     # Pick a sample day with many trades
     day_counts = trade_log.groupby("trading_date").size()

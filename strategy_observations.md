@@ -49,7 +49,7 @@ The OI data is available in every tick file (column 5) but is almost never used 
 
 ## 6. Hold Duration Is Extremely Short
 
-The median hold duration for a straddle position is typically under 60 seconds. This means:
+The median hold duration for a straddle position is approximately **4 seconds**. This is driven by futures price oscillating near strike boundaries — with NIFTY step = 50, a price at 18,225 rounds to 18,250 while 18,224 rounds to 18,200. Small tick-by-tick moves near these boundaries trigger rapid back-and-forth rebalancing. The phantom-trade guard ensures each logged rebalance is a genuine strike change (not a redundant sell/rebuy). This means:
 - The strategy is functionally a **high-frequency scalping approach** on options
 - Each position barely moves before being replaced
 - The "edge" would need to come from gamma moves that exceed theta decay within seconds — unrealistic for most market conditions

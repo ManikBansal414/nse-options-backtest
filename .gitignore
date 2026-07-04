@@ -1,12 +1,17 @@
 __pycache__/
 *.py[cod]
+*.pyc
 .pytest_cache/
 *.log
-results/*
-!results/.gitkeep
+
+# Outputs (regenerated on each run)
 outputs/*
 !outputs/.gitkeep
+
+# Data (too large for git)
+allData/
 
 # IDE
 .vscode/
 .idea/
+.agents/

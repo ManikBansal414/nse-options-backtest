@@ -1,17 +1,18 @@
-"""Script entrypoint for running the backtest from scripts/."""
+"""Script entrypoint for running the backtest."""
 
 import os
 import sys
 import time
 
+# Ensure project root is on the path so `src` package is importable
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
-from engine import BacktestEngine
-from logger import get_logger
-from reporting import clear_results_dir, generate_full_report
-from src.strategies.atm_straddle import ATMStraddle
+from src.engine import BacktestEngine
+from src.logger import get_logger
+from src.reporting import clear_results_dir, generate_full_report
+from src.strategies import ATMStraddle
 
 
 def main() -> None:

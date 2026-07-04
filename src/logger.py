@@ -10,7 +10,7 @@ import os
 import logging
 from typing import Optional
 
-from config import RESULTS_DIR
+from .config import RESULTS_DIR
 
 
 _logger: Optional[logging.Logger] = None
