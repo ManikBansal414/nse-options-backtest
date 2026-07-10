@@ -136,8 +136,3 @@ All externalized in `config/config.yaml`:
 3. `transaction_cost_per_lot` (can be zero)
 4. market `open_time` / `close_time`
 5. data and output paths
-
-## AI usage disclosure
-
-AI tools were used for scaffolding support (documentation structure and minor boilerplate).
-Strategy logic, PnL accounting rules, strike-rebalance guard, and simulation behavior were implemented and validated manually against assignment requirements and generated outputs.
